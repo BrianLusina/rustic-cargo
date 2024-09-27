@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "rustlings"
+name = "rustiCargo"
 version = "0.1.0"
