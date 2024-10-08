@@ -1,0 +1,38 @@
+# ref: https://help.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+
+updates:
+  - package-ecosystem: cargo
+    versioning-strategy: auto
+    open-pull-requests-limit: 10
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+      timezone: "Africa/Nairobi"
+    labels:
+      - "dependencies"
+      - "cargo"
+    assignees:
+      - dependabot
+    reviewers:
+      - "BrianLusina"
+
+  - package-ecosystem: cargo
+    versioning-strategy: auto
+    open-pull-requests-limit: 10
+    directories:
+      - "/src/programs/guess_game"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+      timezone: "Africa/Nairobi"
+    labels:
+      - "dependencies"
+      - "cargo"
+    assignees:
+      - dependabot
+    reviewers:
+      - "BrianLusina"
