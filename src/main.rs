@@ -11,4 +11,11 @@ fn main() {
     println!("Answer is {}. Following standard Math operations(BODMAS)", answer);
     let another_answer = ((6 / 2) + 4) * 3;
     println!("Another Answer is {}. Following standard Math operations (BODMAS) with brackets", another_answer);
+
+    let number = if apples < 10 {
+      apples
+    } else {
+     apples
+    };
+    println!("Number: {}", number)
 }
