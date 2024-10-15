@@ -10,3 +10,16 @@ fn print_square(row_number: i32) -> () {
         row += 1;
     }
 }
+
+fn draw_triangle(n: i32) -> () {
+    let mut row = 1;
+    while row <= n {
+        let mut col = 1;
+        while col <= row {
+            print!("X");
+            col += 1;
+        }
+        println!();
+        row += 1;
+    }
+}
