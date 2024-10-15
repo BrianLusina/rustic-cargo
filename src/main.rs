@@ -52,4 +52,12 @@ fn main() {
         "November",
         "December",
     ];
+
+    let mut counter = 0;
+    while counter < 4 {
+        println!("Yo!, I am in a while loop!");
+        counter += 1;
+    }
+
+    fibo
 }
