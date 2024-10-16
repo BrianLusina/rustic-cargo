@@ -10,7 +10,7 @@ fn say_apples(apples: i32) {
     }
     // bananas variables can not be used here as it is only available in the above scope, but not the
     // parent scope.
-    println!("I can NOT use {} bananas here", bananas);
+    println!("I can NOT use {} bananas here", apples);
     println!("I have {} applies", apples);
 }
 
