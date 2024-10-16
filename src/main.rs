@@ -59,5 +59,31 @@ fn main() {
         counter += 1;
     }
 
-    fibo
+    let mut count = 0;
+    // loop with label
+    'count_up: loop {
+        println!("Count = {count}");
+        let mut remaining = 10;
+
+        // loop without label
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+
+            if count == 2 {
+                break 'count_up;
+            }
+
+            remaining -= 1;
+        }
+        count += 1;
+    }
+    println!("End count from loop = {count}");
+
+    for number in (1..4).rev() {
+        println!("{number}")
+    }
+    println!("LIFTOFF!");
 }
