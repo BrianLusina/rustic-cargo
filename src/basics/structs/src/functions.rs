@@ -1,4 +1,4 @@
-fn say_apples(apples: i32) {
+pub(crate) fn say_apples(apples: i32) {
     println!("I can use {} apples here", apples);
     {
         // inner block with its own scope which inherits from the parent scope in say_apples. Note that
@@ -25,15 +25,9 @@ fn say_mangoes() {
     // Now our original apples is back in scope
     // What do you think this will output?
     println!("mangoes == {}", mangoes);
-
-    /** output
-    mangoes == 10
-    mangoes == 20
-    mangoes == 10
-    **/
 }
 
-fn double(number: i32) -> i32 {
+pub(crate) fn double(number: i32) -> i32 {
     // No need to add a ';' at the end of this expression. Functions evaluate and return the last
     // expression. If a ';' is added, it is read like a statement and will not be returned
     number * 2
@@ -42,12 +36,7 @@ fn double(number: i32) -> i32 {
 /**
 * Returns a unit -> ()
 **/
-fn eat(count: i32, food: &str) -> () {
+pub(crate) fn eat(count: i32, food: &str) -> () {
     println!("You ate {} helpings of {}", count, food)
 }
 
-fn main() {
-    say_apples(10);
-    double(12);
-    eat(10, "apples")
-}
