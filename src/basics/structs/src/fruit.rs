@@ -5,22 +5,67 @@ struct Banana {
     price: f64,
 }
 
+impl Banana {
+    fn new(count: i32, price: f64) -> Banana {
+        Banana {
+            count: count,
+            price: price,
+        };
+    }
+
+    fn increase_by(&mut self, multiplier: i32) -> () {
+        self.price *= multiplier;
+    }
+}
+
 struct Apple {
     count: i32,
     price: f64,
 }
 
+impl Apple {
+    fn new(count: i32, price: f64) -> Apple {
+        Apple {
+            count: count,
+            price: price,
+        };
+    }
+
+    fn increase_by(&mut self, multiplier: i32) -> () {
+        self.price *= multiplier;
+    }
+
+    fn print(&self) {
+        println!("I have {} apples at price {}", self.count, self.price);
+    }
+}
+
 struct Store {
-    apples: Apple,
+    apple: Apple,
     banana: Banana,
 }
 
-fn count_apples(apple: Apple) -> () {
-    println!("I have {} apples at {} price each", apple.count, apple.count)
-}
+impl Store {
+    fn new(apple: Apple, banana: Banana) -> Store {
+        Store {
+            banana: banana,
+            apples: apple,
+        };
+    }
 
-fn count_bananas(banana: Banana) -> () {
-    println!("I have {} bananas at {} price each", banana.count, banana.count)
+    fn count_apples(&self) -> () {
+        println!(
+            "I have {} apples at {} price each",
+            self.apples.count, self.apples.price
+        )
+    }
+
+    fn count_bananas(&self) -> () {
+        println!(
+            "I have {} bananas at {} price each",
+            self.banana.count, self.banana.price
+        )
+    }
 }
 
 fn store() {
@@ -31,9 +76,14 @@ fn store() {
 
     let banana = Banana {
         count: 20,
-        price: 25.0
+        price: 25.0,
     };
 
-    count_apples(apple);
-    count_bananas(banana);
+    let store = Store {
+        banana: banana,
+        apples: apple,
+    };
+
+    store.count_apples(apple);
+    store.count_bananas(banana);
 }
