@@ -87,4 +87,9 @@ fn main() {
     }
     println!("LIFTOFF!");
 
+    let first_name = "Michael".to_owned();
+    let last_name = "Snow";
+    let full_name: std::string::String = first_name + last_name;
+    println!("{full_name}")
+
 }
