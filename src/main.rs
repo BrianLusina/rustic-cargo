@@ -90,6 +90,12 @@ fn main() {
     let first_name = "Michael".to_owned();
     let last_name = "Snow";
     let full_name: std::string::String = first_name + last_name;
-    println!("{full_name}")
+    println!("{full_name}");
 
+    let mut numbers_vector: Vec<i32> = vec!(1,2,3,4,5);
+    numbers_vector.push(10);
+    println!("{:?}", numbers_vector);
+
+    let numbers_vector_2: Vec<i32> = vec![1,2,3,4,5];
+    println!("{:?}", numbers_vector_2);
 }
