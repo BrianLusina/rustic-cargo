@@ -1,7 +1,5 @@
 mod functions;
-mod fruit;
 mod ownership;
-mod rectangle;
 
 fn main() {
     functions::say_apples(10);
