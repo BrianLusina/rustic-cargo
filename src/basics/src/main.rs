@@ -1,5 +1,8 @@
 mod functions;
 mod ownership;
+mod fruit;
+mod person;
+mod speed;
 
 fn main() {
     functions::say_apples(10);
