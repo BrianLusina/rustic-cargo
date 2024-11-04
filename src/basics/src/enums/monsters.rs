@@ -6,16 +6,15 @@ enum Monster {
 }
 
 impl Monster {
-    fn lives(&self) -> Optional<Place> {
+    fn lives(&self) -> Option<Place> {
         use Monster::*;
         use Place::*;
-        use Optional::*;
 
         match self {
-            LochNess => Known(Scotland),
-            Dracula => Known(Transylvania),
-            Bigfoot => Unknown,
-            Alien => Unknown,
+            LochNess => Some(Scotland),
+            Dracula => Some(Transylvania),
+            Bigfoot => None,
+            Alien => None,
         }
     }
 
@@ -40,9 +39,4 @@ enum Food {
     Cows,
     Berries,
     Fish,
-}
-
-enum Optional<T> {
-    Known(T),
-    Unknown,
 }

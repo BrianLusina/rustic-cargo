@@ -1,11 +1,4 @@
 mod functions;
-mod ownership;
-mod fruit;
-mod person;
-mod speed;
-mod job;
-mod monsters;
-mod hero;
 
 fn main() {
     functions::say_apples(10);

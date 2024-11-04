@@ -5,7 +5,7 @@ trait Operations {
 }
 
 impl Operations for i32 {
-    fn double(&self) -> Self {
+    fn double(&self) -> Self w{
         self * 2
     }
 
