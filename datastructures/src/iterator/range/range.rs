@@ -38,9 +38,7 @@ mod tests {
     #[test]
     fn test_one_to_ten() {
         let mut total = 0;
-        for i in OneToTen::new() {
-            total += i;
-        }
+        OneToTen::new();
 
         assert_eq!(total, 55);
     }

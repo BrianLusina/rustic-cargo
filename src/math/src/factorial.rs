@@ -22,6 +22,20 @@ fn factorial_iter(target: u32) -> u32 {
     }
 }
 
+fn factorial_iter_with_for_loop(x: u32) -> u32 {
+    if x == 0 {
+        return 1
+    }
+    let mut start = 1;
+    let mut result = 1;
+
+    for num in start..=x {
+        result *= start;
+        start +=1;
+    }
+    result
+}
+
 #[cfg(test)]
 mod factorial_tests {
     use super::*;
@@ -36,6 +50,13 @@ mod factorial_tests {
     #[test]
     fn factorial_of_5_iter() {
         let result = factorial_iter(5);
+        let expected = 120;
+        assert_eq!(result, expected);
+    }
+
+    #[test]
+    fn factorial_of_5_iter_for_loop() {
+        let result = factorial_iter_with_for_loop(5);
         let expected = 120;
         assert_eq!(result, expected);
     }
