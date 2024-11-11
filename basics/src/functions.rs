@@ -39,4 +39,3 @@ pub(crate) fn double(number: i32) -> i32 {
 pub(crate) fn eat(count: i32, food: &str) -> () {
     println!("You ate {} helpings of {}", count, food)
 }
-

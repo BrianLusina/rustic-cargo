@@ -25,7 +25,7 @@ mod tests {
         let fibs = vec![0, 1, 1, 2, 3, 5, 8, 13];
         let iter = VecIter {
             vec: fibs,
-            index: 0
+            index: 0,
         };
         for x in iter {
             println!("{}", x);

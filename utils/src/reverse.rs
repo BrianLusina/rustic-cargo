@@ -16,9 +16,9 @@ mod tests {
     #[test]
     fn test_reverse() {
         assert_eq!(reverse(&[]), vec![]);
-        assert_eq!(reverse(&[1, 2, 3]), vec![3,2,1]);
-        assert_eq!(reverse(&[1, 2, 3, 4]), vec![4,3,2,1]);
+        assert_eq!(reverse(&[1, 2, 3]), vec![3, 2, 1]);
+        assert_eq!(reverse(&[1, 2, 3, 4]), vec![4, 3, 2, 1]);
         assert_eq!(reverse(&[1, 2, 3, 4, 5]), vec![5, 4, 3, 2, 1]);
-        assert_eq!(reverse(&[1, 2, 3, 6, 7, 8]), vec![8, 7, 6, 3,2,1]);
+        assert_eq!(reverse(&[1, 2, 3, 6, 7, 8]), vec![8, 7, 6, 3, 2, 1]);
     }
 }

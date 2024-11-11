@@ -24,14 +24,14 @@ fn factorial_iter(target: u32) -> u32 {
 
 fn factorial_iter_with_for_loop(x: u32) -> u32 {
     if x == 0 {
-        return 1
+        return 1;
     }
     let mut start = 1;
     let mut result = 1;
 
     for num in start..=x {
         result *= start;
-        start +=1;
+        start += 1;
     }
     result
 }

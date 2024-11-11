@@ -1,4 +1,4 @@
-mod factorial;
-mod utils;
-mod fibonacci;
 mod average;
+mod factorial;
+mod fibonacci;
+mod utils;

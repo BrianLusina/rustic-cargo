@@ -2,7 +2,7 @@ use crate::iterator::iterator::CustomIterator;
 
 // Custom Range struct that counts from 1 to 10
 struct OneToTen {
-    next_val: u32
+    next_val: u32,
 }
 
 impl OneToTen {

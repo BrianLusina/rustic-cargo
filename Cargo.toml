@@ -1,0 +1,11 @@
+[workspace]
+
+members = [
+    "datastructures",
+    "math",
+    "programs/guess_game",
+    "time",
+    "utils",
+    "basics",
+    "algorithms"
+, "programs/restaurant"]

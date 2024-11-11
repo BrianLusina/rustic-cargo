@@ -64,5 +64,4 @@ mod tests {
             Time::from_hms(hour, minute, second).unwrap(),
         )
     }
-
 }

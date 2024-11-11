@@ -59,6 +59,6 @@ mod fibs_tests {
 
     #[test]
     fn count_of_eight() {
-        assert_eq!(fibs(8), vec![1, 1, 2, 3, 5, 8, 13,21]);
+        assert_eq!(fibs(8), vec![1, 1, 2, 3, 5, 8, 13, 21]);
     }
 }
