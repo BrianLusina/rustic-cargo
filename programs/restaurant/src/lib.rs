@@ -1,6 +1,6 @@
 mod front_of_house {
-    mod hosting {
-        fn add_to_waitlist() {}
+    pub mod hosting {
+        pub fn add_to_waitlist() {}
 
         fn seat_at_table() {}
     }
@@ -12,4 +12,60 @@ mod front_of_house {
 
         fn take_payment() {}
     }
+}
+
+mod back_of_house {
+
+    // enum is defined as public, therefore it is accessible outside this module. This also means
+    // that the variants of this enum are also available publicly.
+    pub enum Appetizer {
+        Soup,
+        Salad,
+    }
+
+    pub struct Breakfast {
+        // toast will be made available(public) to other modules
+        pub toast: String,
+        // seasonal_fruit will remain a private field to this struct
+        seasonal_fruit: String,
+    }
+
+    impl Breakfast {
+        pub fn summer(toast: &str) -> Breakfast {
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("peaches"),
+            }
+        }
+    }
+
+    fn fix_incorrect_order() {
+        cook_order();
+        super::deliver_order();
+    }
+
+    fn cook_order() {}
+}
+
+fn deliver_order() {}
+
+pub fn eat_at_restaurant() {
+    // absolute path
+    crate::front_of_house::hosting::add_to_waitlist();
+
+    // relative path
+    front_of_house::hosting::add_to_waitlist();
+
+    // order a breakfast in the summer with Rye toast
+    let mut meal = back_of_house::Breakfast::summer("Rye");
+
+    // change our mind about what bread we'd like
+    meal.toast = String::from("Wheat");
+    println!("I'd like {} toast please", meal.toast);
+
+    // this will not compile as seasonal_fruit is a private field in the public struct Breakfast
+    // meal.seasonal_fruit = String::from("blueberries");
+
+    let order1 = back_of_house::Appetizer::Soup;
+    let order2 = back_of_house::Appetizer::Salad;
 }
