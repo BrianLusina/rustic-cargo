@@ -1,63 +1,25 @@
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
+mod front_of_house;
+mod back_of_house;
 
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}
-
-mod back_of_house {
-
-    // enum is defined as public, therefore it is accessible outside this module. This also means
-    // that the variants of this enum are also available publicly.
-    pub enum Appetizer {
-        Soup,
-        Salad,
-    }
-
-    pub struct Breakfast {
-        // toast will be made available(public) to other modules
-        pub toast: String,
-        // seasonal_fruit will remain a private field to this struct
-        seasonal_fruit: String,
-    }
-
-    impl Breakfast {
-        pub fn summer(toast: &str) -> Breakfast {
-            Breakfast {
-                toast: String::from(toast),
-                seasonal_fruit: String::from("peaches"),
-            }
-        }
-    }
-
-    fn fix_incorrect_order() {
-        cook_order();
-        super::deliver_order();
-    }
-
-    fn cook_order() {}
-}
+use crate::front_of_house::hosting;
+// the below is also correct and is valid, however, the above is a better and more idiomatic way of
+// showing what is in scope and makes it clear that we are using the add_to_waitlist function from
+// the hosting module, prefer the above use of 'use' over the below
+// use crate::front_of_house::hosting::add_to_waitlist;
 
 fn deliver_order() {}
 
 pub fn eat_at_restaurant() {
     // absolute path
-    crate::front_of_house::hosting::add_to_waitlist();
+    // crate::front_of_house::hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
 
     // relative path
-    front_of_house::hosting::add_to_waitlist();
+    // front_of_house::hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
 
     // order a breakfast in the summer with Rye toast
-    let mut meal = back_of_house::Breakfast::summer("Rye");
+    let mut meal = back_of_house::breakfast::Breakfast::summer("Rye");
 
     // change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
@@ -66,6 +28,6 @@ pub fn eat_at_restaurant() {
     // this will not compile as seasonal_fruit is a private field in the public struct Breakfast
     // meal.seasonal_fruit = String::from("blueberries");
 
-    let order1 = back_of_house::Appetizer::Soup;
-    let order2 = back_of_house::Appetizer::Salad;
+    let order1 = back_of_house::appetizer::Appetizer::Soup;
+    let order2 = back_of_house::appetizer::Appetizer::Salad;
 }
