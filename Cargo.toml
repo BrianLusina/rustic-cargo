@@ -7,5 +7,7 @@ members = [
     "time",
     "utils",
     "basics",
-    "algorithms"
-, "programs/restaurant"]
+    "algorithms",
+    "strings",
+    "programs/restaurant"
+]
