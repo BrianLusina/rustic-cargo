@@ -6,9 +6,7 @@ enum Message {
 }
 
 impl Message {
-    fn call(&self) {
-
-    }
+    fn call(&self) {}
 }
 #[cfg(test)]
 mod tests {
@@ -18,6 +16,5 @@ mod tests {
     fn test_ip_address() {
         let m = Message::Write(String::from("Hello"));
         m.call();
-
     }
 }

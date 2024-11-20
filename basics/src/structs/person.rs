@@ -7,7 +7,7 @@ impl Person {
     fn new(name: String, age: i32) -> Self {
         Person {
             name: name,
-            age: age
+            age: age,
         }
     }
 

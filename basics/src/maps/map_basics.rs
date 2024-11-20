@@ -16,8 +16,8 @@ fn count_words() -> () {
 
 #[cfg(test)]
 mod tests {
-    use std::collections::HashMap;
     use crate::maps::map_basics::count_words;
+    use std::collections::HashMap;
 
     #[test]
     fn test_basics() {
@@ -47,4 +47,3 @@ mod tests {
         count_words();
     }
 }
-

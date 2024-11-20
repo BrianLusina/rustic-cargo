@@ -21,7 +21,7 @@ impl Monster {
     fn eats(&self) -> Option<Food> {
         use Monster::*;
         match self {
-            LochNess => {Some(Food::Fish)}
+            LochNess => Some(Food::Fish),
             Dracula => Some(Food::Blood),
             Bigfoot => Some(Food::Berries),
             Alien => Some(Food::Cows),

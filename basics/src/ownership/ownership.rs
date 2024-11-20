@@ -11,7 +11,7 @@ fn main() {
     let len = calculate_length(&s);
 
     take_ownership(s); // s's value moves into the function
-    // s is no longer valid here
+                       // s is no longer valid here
 
     let x = 5; // x comes into scope
 

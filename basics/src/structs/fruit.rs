@@ -4,12 +4,9 @@ struct Fruit<T> {
     data: T,
 }
 
-impl <T> Fruit<T> {
+impl<T> Fruit<T> {
     fn new(calories: i32, data: T) -> Fruit<T> {
-        Self{
-            calories,
-            data
-        }
+        Self { calories, data }
     }
 
     // can be used to clone the Fruit struct if it does not already implement the Clone trait, in

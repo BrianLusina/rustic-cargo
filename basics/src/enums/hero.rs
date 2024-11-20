@@ -9,7 +9,7 @@ impl Hero {
         match self {
             Hero::Goku => Some(100),
             Hero::Vegeta => Some(200),
-            Hero::Superman => None
+            Hero::Superman => None,
         }
     }
 

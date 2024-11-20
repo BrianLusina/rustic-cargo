@@ -1,8 +1,8 @@
-mod functions;
-mod structs;
-mod ownership;
 mod enums;
+mod functions;
 mod maps;
+mod ownership;
+mod structs;
 
 fn main() {
     functions::say_apples(10);

@@ -1,6 +1,4 @@
-mod trees;
 mod iterator;
+mod trees;
 
-mod datastructures {
-
-}
+mod datastructures {}

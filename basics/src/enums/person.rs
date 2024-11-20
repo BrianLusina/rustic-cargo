@@ -1,7 +1,7 @@
 use crate::job;
+use crate::job::{IsTeacher, Subject};
 use job::Job;
 use job::Job::{Banker, Farmer, Scientist, Teacher};
-use crate::job::{IsTeacher, Subject};
 
 #[derive(Debug, Ord, PartialOrd, Eq, PartialEq, Clone)]
 struct Person {

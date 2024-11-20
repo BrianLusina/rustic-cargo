@@ -1,5 +1,5 @@
-mod front_of_house;
 mod back_of_house;
+mod front_of_house;
 
 use crate::front_of_house::hosting;
 // the below is also correct and is valid, however, the above is a better and more idiomatic way of

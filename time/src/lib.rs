@@ -1,2 +1,2 @@
-mod gigasecond;
 mod clock;
+mod gigasecond;

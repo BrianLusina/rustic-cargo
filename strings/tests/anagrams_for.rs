@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod anagram_for_tests {
-    use strings::anagram::anagrams::anagrams_for;
     use std::collections::HashSet;
+    use strings::anagram::anagrams::anagrams_for;
 
     #[test]
     fn no_matches() {
@@ -172,4 +172,3 @@ mod anagram_for_tests {
         assert_eq!(output, expected);
     }
 }
-

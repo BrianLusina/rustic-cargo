@@ -7,7 +7,7 @@ pub enum Job {
     Scientist(Field),
     Teacher(Subject),
     Farmer,
-    Banker
+    Banker,
 }
 
 impl IsTeacher for Job {
@@ -24,7 +24,7 @@ impl IsTeacher for Job {
 #[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd)]
 pub enum Subject {
     Art,
-    Math
+    Math,
 }
 
 #[derive(Clone, Debug, Eq, Ord, PartialEq, PartialOrd)]
