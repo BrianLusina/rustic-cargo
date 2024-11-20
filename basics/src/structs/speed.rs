@@ -51,7 +51,7 @@ impl InXTime for Mph {
 
 #[cfg(test)]
 mod tests {
-    use crate::speed::{InXTime, Kmh, Mph};
+    use crate::structs::speed::{InXTime, Kmh, Mph};
 
     #[test]
     fn kmh_distance_calculation() {
