@@ -4,3 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+[profile.release]
+# aborts on panic in release mode and avoids unwinding the call stack. This will mean that the memory the program is using
+# will be cleaned up by the Operating System the program was running on. The default option is 'unwind' which will 'unwind'
+# the entire call stack of the program.
+panic = "abort"
