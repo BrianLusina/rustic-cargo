@@ -3,6 +3,7 @@ mod functions;
 mod maps;
 mod ownership;
 mod structs;
+mod errors;
 
 fn main() {
     functions::say_apples(10);
