@@ -1,6 +1,9 @@
+mod guess;
+
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
+use crate::guess::Guess;
 
 fn main() {
     println!("Guess the number");
@@ -9,20 +12,22 @@ fn main() {
     loop {
         println!("Please input your guess");
 
-        let mut guess = String::new();
+        let mut user_input_guess = String::new();
 
         io::stdin()
-            .read_line(&mut guess)
+            .read_line(&mut user_input_guess)
             .expect("Failed to read line");
 
-        let guess: u32 = match guess.trim().parse() {
+        let input_guess_num: i32 = match user_input_guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        println!("You guessed: {}", guess);
+        let guess = Guess::new(input_guess_num);
 
-        match guess.cmp(&secret_number) {
+        println!("You guessed: {}", guess.value());
+
+        match guess.value().cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Equal => {
                 println!("You win!");
