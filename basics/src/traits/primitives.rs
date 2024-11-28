@@ -1,11 +1,11 @@
-trait Operations {
+pub trait Operations {
     fn double(&self) -> Self;
 
     fn square(&self) -> Self;
 }
 
 impl Operations for i32 {
-    fn double(&self) -> Self w{
+    fn double(&self) -> Self {
         self * 2
     }
 
@@ -26,6 +26,8 @@ impl Operations for i64 {
 
 #[cfg(test)]
 mod tests {
+    use crate::traits::primitives::Operations;
+
     #[test]
     fn double() {
         let x: i32 = 5;
@@ -37,7 +39,7 @@ mod tests {
     #[test]
     fn square_i32() {
         let x: i32 = 5;
-        let y: i32 = 5_i64;
+        let y: i64 = 5_i64;
         assert_eq!(x.square(), 25);
         assert_eq!(y.square(), 25);
     }

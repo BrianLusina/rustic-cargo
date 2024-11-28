@@ -5,7 +5,7 @@ enum IpAddrKind {
 
 #[cfg(test)]
 mod tests {
-    use crate::ip_address::IpAddrKind;
+    use crate::enums::ip_address::IpAddrKind;
 
     #[test]
     fn test_ip_address() {

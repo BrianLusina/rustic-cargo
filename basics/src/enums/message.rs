@@ -10,7 +10,7 @@ impl Message {
 }
 #[cfg(test)]
 mod tests {
-    use crate::message::Message;
+    use crate::enums::message::Message;
 
     #[test]
     fn test_ip_address() {

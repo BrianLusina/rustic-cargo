@@ -16,7 +16,7 @@ impl<X, Y> Point<X, Y> {
         Point { x: x, y: y }
     }
 
-    fn mixup<X, Y>(self, other: Point<X, Y>) -> Point<X, Y> {
+    fn mixup(self, other: Point<X, Y>) -> Point<X, Y> {
         Self {
             x: self.x,
             y: other.y,

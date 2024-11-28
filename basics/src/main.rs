@@ -5,6 +5,7 @@ mod ownership;
 mod structs;
 mod errors;
 mod generics;
+mod traits;
 
 fn main() {
     functions::say_apples(10);

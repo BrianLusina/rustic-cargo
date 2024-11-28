@@ -1,5 +1,5 @@
-use crate::job;
-use crate::job::{IsTeacher, Subject};
+use crate::enums::job;
+use crate::enums::job::{IsTeacher, Subject};
 use job::Job;
 use job::Job::{Banker, Farmer, Scientist, Teacher};
 
@@ -74,8 +74,8 @@ impl IsTeacher for Person {
 
 #[cfg(test)]
 mod tests {
-    use crate::job::Job;
-    use crate::person::Person;
+    use crate::enums::job::Job;
+    use crate::enums::person::Person;
 
     #[test]
     fn equality() {
