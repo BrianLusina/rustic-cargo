@@ -1,6 +1,6 @@
 // reverse reverses a slice of signed 32-bit integers and returns a vector of signed 32 bit integers
 // First becomes last and so on.
-fn reverse(numbers: &[i32]) -> Vec<i32> {
+pub fn reverse(numbers: &[i32]) -> Vec<i32> {
     let mut result: Vec<i32> = Vec::with_capacity(numbers.len());
     for i in (0..numbers.len()).rev() {
         result.push(numbers[i]);

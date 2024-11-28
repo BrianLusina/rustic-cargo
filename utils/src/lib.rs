@@ -1,2 +1,3 @@
-mod max;
-mod reverse;
+pub mod max;
+pub mod reverse;
+pub mod vectors;

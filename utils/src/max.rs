@@ -1,4 +1,4 @@
-fn find_maximum(numbers: &[usize]) -> usize {
+pub fn find_maximum(numbers: &[usize]) -> usize {
     let mut max = 0;
     for number in numbers {
         if number > &max {

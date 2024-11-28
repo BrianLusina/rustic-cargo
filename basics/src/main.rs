@@ -4,6 +4,7 @@ mod maps;
 mod ownership;
 mod structs;
 mod errors;
+mod generics;
 
 fn main() {
     functions::say_apples(10);
