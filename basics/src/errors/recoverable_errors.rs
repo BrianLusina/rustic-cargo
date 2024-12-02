@@ -1,7 +1,6 @@
 use std::fs::File;
 use std::io::ErrorKind;
 
-
 // This is a demonstration of error handling using the Result<T, E> enum, which allows branching between
 // Ok and Err variants to handle recoverable errors such as when opening a file. In this case, the file
 // handle is returned and passed on to the file variable if it exists, otherwise, the error is handled
@@ -20,12 +19,11 @@ fn opening_file(file_name: &str) {
             ErrorKind::NotFound => match File::create(file_name) {
                 Ok(file) => file,
                 Err(error) => panic!("Could not create file: {:?}", error),
-            }
+            },
             other_error => panic!("Opening file failed: {:?}", error),
-        }
+        },
     };
 }
-
 
 // This is the same as the opening_file function, with the only difference in how the error handling
 // is done. In this case, the unwrap_or_else method is used to handle the error. This makes the code

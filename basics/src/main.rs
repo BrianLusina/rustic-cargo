@@ -1,10 +1,10 @@
 mod enums;
+mod errors;
 mod functions;
+mod generics;
 mod maps;
 mod ownership;
 mod structs;
-mod errors;
-mod generics;
 mod traits;
 
 fn main() {

@@ -1,15 +1,13 @@
 #[derive(Debug)]
 pub struct Duration {
-    seconds: f64
+    seconds: f64,
 }
 
 const EARTH_ORBITAL: f64 = 31_557_600.0;
 
 impl From<u64> for Duration {
     fn from(s: u64) -> Self {
-        Self {
-            seconds: s as f64
-        }
+        Self { seconds: s as f64 }
     }
 }
 
@@ -86,8 +84,8 @@ impl Planet for Neptune {
 
 #[cfg(test)]
 mod space_age_tests {
-    use space_age::space_age::*;
     use crate::space_age;
+    use space_age::space_age::*;
 
     fn assert_in_delta(expected: f64, actual: f64) {
         let diff: f64 = (expected - actual).abs();

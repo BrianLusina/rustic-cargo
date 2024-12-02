@@ -10,7 +10,7 @@ struct NewsArticle {
     headline: String,
     location: String,
     author: String,
-    content: String
+    content: String,
 }
 
 impl Summary for NewsArticle {
@@ -23,7 +23,7 @@ struct Tweet {
     username: String,
     content: String,
     reply: bool,
-    retweet: bool
+    retweet: bool,
 }
 
 impl Summary for Tweet {
@@ -60,10 +60,10 @@ fn some_function<T: Display + Clone, U: Clone + Debug>(t: &T, u: &U) -> i32 {
 
 // multiple trait bounds using the where clause operator on the generic types. This makes it more
 // readable and expressive
-fn some_function2<T,U>(t: &T, u: &U) -> i32
+fn some_function2<T, U>(t: &T, u: &U) -> i32
 where
     T: Display + Clone,
-    U: Clone + Debug
+    U: Clone + Debug,
 {
     30
 }
@@ -83,17 +83,15 @@ fn returns_summarizable() -> impl Summary {
 
 #[cfg(test)]
 mod summary_tests {
+    use crate::traits::summary::NewsArticle;
     use crate::traits::summary::Summary;
     use crate::traits::summary::Tweet;
-    use crate::traits::summary::NewsArticle;
 
     #[test]
     fn summarizes_tweets() {
         let tweet = Tweet {
             username: String::from("horse_ebooks"),
-            content: String::from(
-                "of course, as you probably already know, people",
-            ),
+            content: String::from("of course, as you probably already know, people"),
             reply: false,
             retweet: false,
         };

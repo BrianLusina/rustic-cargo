@@ -1,9 +1,9 @@
 mod guess;
 
+use crate::guess::Guess;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-use crate::guess::Guess;
 
 fn main() {
     println!("Guess the number");

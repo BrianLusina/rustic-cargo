@@ -1,5 +1,8 @@
 // find_largest finds the largest item in a given list of items
-pub fn find_largest<T>(list: &[T]) -> &T where T: PartialOrd + Sized {
+pub fn find_largest<T>(list: &[T]) -> &T
+where
+    T: PartialOrd + Sized,
+{
     let mut largest = &list[0];
     for item in list {
         if item > largest {

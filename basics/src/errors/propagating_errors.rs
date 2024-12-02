@@ -16,8 +16,8 @@ fn read_username_from_file(file_name: &str) -> Result<String, std::io::Error> {
     let mut username = String::new();
 
     match username_file.read_to_string(&mut username) {
-        Ok(_) => {Ok(username)},
-        Err(e) => {Err(e)}
+        Ok(_) => Ok(username),
+        Err(e) => Err(e),
     }
 }
 

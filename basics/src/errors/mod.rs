@@ -1,2 +1,2 @@
-mod recoverable_errors;
 mod propagating_errors;
+mod recoverable_errors;
