@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+strings = { path = "../strings"}
 
 [profile.release]
 # aborts on panic in release mode and avoids unwinding the call stack. This will mean that the memory the program is using

@@ -17,14 +17,14 @@ impl<'a> ImportantExcerpt<'a> {
         5
     }
 
-    //! Using the lifetime elision rules, the self has already a lifetime attached to it and since the
-    //! second argument to the function is a reference to a string slice and the return type is a
-    //! reference to a string type, the lifetimes are annotated on the self and the announcement
-    //! parameters. And because one of the arguments is &self, the return type gets the lifetime of
-    //! &self and all lifetimes have now been accounted for, so the compiler will result in creating:
-    //! ```
-    //! fn announce_and_return_part<'a,'b>(&'a self, announcement: &'b str) -> &'a str {}
-    //! ```
+    // Using the lifetime elision rules, the self has already a lifetime attached to it and since the
+    // second argument to the function is a reference to a string slice and the return type is a
+    // reference to a string type, the lifetimes are annotated on the self and the announcement
+    // parameters. And because one of the arguments is &self, the return type gets the lifetime of
+    // &self and all lifetimes have now been accounted for, so the compiler will result in creating:
+    // ```
+    // fn announce_and_return_part<'a,'b>(&'a self, announcement: &'b str) -> &'a str {}
+    // ```
     fn announce_and_return_part(&self, announcement: &str) -> &str {
         println!("Attention please: {}", announcement);
         self.part
