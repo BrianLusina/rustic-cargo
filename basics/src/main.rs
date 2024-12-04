@@ -6,6 +6,7 @@ mod maps;
 mod ownership;
 mod structs;
 mod traits;
+mod lifetimes;
 
 fn main() {
     functions::say_apples(10);
