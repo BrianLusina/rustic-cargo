@@ -35,12 +35,19 @@ mod tests {
     }
 
     #[test]
-    fn test_can_hold() {
+    fn larger_can_hold_smaller() {
         let rectangle_one = Rectangle::new(30, 50);
         let rect_two = Rectangle::new(10, 40);
         assert!(rectangle_one.can_hold(&rect_two));
 
         let rect_three = Rectangle::new(60, 45);
         assert!(!rectangle_one.can_hold(&rect_three));
+    }
+
+    #[test]
+    fn smaller_cannot_hold_larger() {
+        let larger_rectangle = Rectangle::new(30, 50);
+        let smaller_rectangle = Rectangle::new(10, 40);
+        assert!(!smaller_rectangle.can_hold(&larger_rectangle));
     }
 }

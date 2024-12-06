@@ -61,15 +61,15 @@ mod tests {
     fn kmh_distance_calculation() {
         let speed = Kmh { value: 90 };
         let distance = speed.in_x_time(3);
-        let expectedDistance = 270;
-        assert_eq!(distance.value, expectedDistance);
+        let expected_distance = 270;
+        assert_eq!(distance.value, expected_distance);
     }
 
     #[test]
     fn mph_distance_calculation() {
         let speed = Mph { value: 90 };
         let distance = speed.in_x_time(3);
-        let expectedMiles = 270;
-        assert_eq!(distance.value, expectedMiles);
+        let expected_miles = 270;
+        assert_eq!(distance.value, expected_miles);
     }
 }
