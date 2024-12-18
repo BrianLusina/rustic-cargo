@@ -1,4 +1,4 @@
-fn print_square(row_number: i32) -> () {
+pub fn print_square(row_number: i32) -> () {
     let mut row = 0;
     while row < row_number {
         let mut col = 0;
@@ -11,7 +11,7 @@ fn print_square(row_number: i32) -> () {
     }
 }
 
-fn draw_triangle(n: i32) -> () {
+pub fn draw_triangle(n: i32) -> () {
     let mut row = 1;
     while row <= n {
         let mut col = 1;
