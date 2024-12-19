@@ -1,4 +1,7 @@
-fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: std::fmt::Display {
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+    T: std::fmt::Display,
+{
     println!("Announcement! {}", ann);
     strings::utils::longest::longest(x, y)
 }
@@ -12,6 +15,6 @@ mod longest_tests {
         let x = String::from("hello");
         let y = String::from("world");
         let result = longest_with_an_announcement(&x, &y, "hello");
-        assert_eq!(result,  "world");
+        assert_eq!(result, "world");
     }
 }

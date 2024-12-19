@@ -8,7 +8,6 @@ struct ImportantExcerpt<'a> {
 // lifetimes on impl of structs have to be added after the impl keyword and also after the structs
 // name as they are a type for the struct
 impl<'a> ImportantExcerpt<'a> {
-
     // Following the lifetime elision rules, this does not require the lifetime to be included in the
     // return type nor the first argument to the method. Since self is already annotated with a
     // lifetime and the return type does not require a lifetime as it is not a reference to any
