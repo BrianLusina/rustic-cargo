@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 // Checks if a given passed in phrase or sequence of characters in any type is a palindrome, i.e.
 // reads the same forwards as it does backwards.
 //
@@ -52,5 +54,29 @@ pub fn is_palindrome(s: &str) -> bool {
         left += 1;
         right -= 1;
     }
+    true
+}
+
+pub fn is_palindrome_permutation(s: &str) -> bool {
+    let normalized = s.replace(" ", "").to_lowercase();
+
+    let mut char_count: HashMap<char, i32> = HashMap::new();
+
+    for c in normalized.chars() {
+        let count = char_count.entry(c).or_insert(0);
+        *count += 1;
+    }
+
+    let mut odd_count = 0;
+
+    for (_, count) in char_count {
+        let is_even = count % 2 != 0;
+        if is_even && odd_count == 0 {
+            odd_count += 1;
+        } else if is_even && odd_count != 0 {
+            return false;
+        }
+    }
+
     true
 }

@@ -58,3 +58,29 @@ mod is_palindrome_tests {
         assert_eq!(actual, true);
     }
 }
+
+#[cfg(test)]
+mod is_palindrome_permutation_tests {
+    use strings::palindrome::is_palindrome::is_palindrome_permutation;
+
+    #[test]
+    fn test_tact_coa() {
+        let word = "Tact Coa";
+        let actual = is_palindrome_permutation(word);
+        assert_eq!(actual, true);
+    }
+
+    #[test]
+    fn test_this_is_not_a_palindrome_permutation() {
+        let word = "This is not a palindrome permutation";
+        let actual = is_palindrome_permutation(word);
+        assert_eq!(actual, false);
+    }
+
+    #[test]
+    fn test_taco_cat() {
+        let word = "taco cat";
+        let actual = is_palindrome_permutation(word);
+        assert_eq!(actual, true);
+    }
+}
