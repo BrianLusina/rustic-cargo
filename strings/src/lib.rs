@@ -4,3 +4,4 @@ pub mod palindrome;
 pub mod reverse_string;
 pub mod slice;
 pub mod utils;
+pub mod permutation;
