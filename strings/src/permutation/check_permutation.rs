@@ -1,5 +1,5 @@
-use std::collections::HashMap;
 use crate::utils::sort_word::sort_string_unstable;
+use std::collections::HashMap;
 
 // checks that two strings are permutations of each other and returns true if they are or false
 // otherwise.
@@ -42,12 +42,12 @@ pub fn check_permutation_with_map(input_str_1: &str, input_str_2: &str) -> bool 
 
     let mut char_count_map: HashMap<char, i32> = HashMap::new();
 
-    for c in input_str_1.chars() {
+    for c in input_str_1_lower.chars() {
         let count = char_count_map.entry(c).or_insert(0);
         *count += 1;
     }
 
-    for c in input_str_2.chars() {
+    for c in input_str_2_lower.chars() {
         let count = char_count_map.entry(c).or_insert(0);
         *count -= 1;
     }
