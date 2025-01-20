@@ -3,13 +3,13 @@ use std::collections::HashMap;
 // Checks that an input string has unique characters and returns true if it does. if not, false is
 // returned
 pub fn is_unique(input_string: &str) -> bool {
-    let mut charMap: HashMap<char, bool> = HashMap::new();
+    let mut char_map: HashMap<char, bool> = HashMap::new();
 
     for char in input_string.chars() {
-        if charMap.contains_key(&char) {
+        if char_map.contains_key(&char) {
             return false;
         } else {
-            charMap.insert(char, true);
+            char_map.insert(char, true);
         }
     }
 
