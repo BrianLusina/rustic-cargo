@@ -37,7 +37,7 @@ pub fn circular_array_loop(nums: Vec<i32>) -> bool {
             // Move slow pointer
             slow = ((slow as i32 + nums[slow]) % n as i32) as usize;
             if slow < 0 {
-                slow += n as i32; // Handle negative indices
+                slow += n; // Handle negative indices
             }
             let slow_usize = slow as usize;
             if nums[slow_usize] * direction <= 0 || visited[slow_usize] {
@@ -47,7 +47,7 @@ pub fn circular_array_loop(nums: Vec<i32>) -> bool {
             // Move fast pointer twice
             fast = ((fast as i32 + nums[fast]) % n as i32) as usize;
             if fast < 0 {
-                fast += n as i32; // Handle negative indices
+                fast += n; // Handle negative indices
             }
             let fast_usize = fast as usize;
             if nums[fast_usize] * direction <= 0 || visited[fast_usize] {
@@ -55,7 +55,7 @@ pub fn circular_array_loop(nums: Vec<i32>) -> bool {
             }
             fast = ((fast as i32 + nums[fast_usize]) % n as i32);
             if fast < 0 {
-                fast += n as i32; // Handle negative indices
+                fast += n; // Handle negative indices
             }
             let fast_usize = fast as usize;
             if nums[fast_usize] * direction <= 0 || visited[fast_usize] {
@@ -65,7 +65,7 @@ pub fn circular_array_loop(nums: Vec<i32>) -> bool {
             // If slow and fast meet, a cycle is detected
             if slow == fast {
                 // Check if the cycle length is greater than 1
-                let next_slow = ((slow as i32 + nums[slow_usize]) % n as i32;
+                let next_slow = ((slow as i32 + nums[slow_usize]) % n as i32);
                 if next_slow < 0 {
                     next_slow += n as i32; // Handle negative indices
                 }
