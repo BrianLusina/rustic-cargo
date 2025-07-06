@@ -1,1 +1,2 @@
-mod space_age;
+pub mod space_age;
+pub mod minesweeper;
