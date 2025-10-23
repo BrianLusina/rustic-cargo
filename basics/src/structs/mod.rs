@@ -3,3 +3,4 @@ mod person;
 mod rectangle;
 mod running_totals;
 mod speed;
+mod point;

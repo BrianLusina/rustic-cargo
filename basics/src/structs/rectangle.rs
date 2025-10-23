@@ -16,6 +16,16 @@ impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
+
+    fn set_width(mut self, width: u32) -> Self {
+        self.width = width;
+        self
+    }
+
+    fn set_height(mut self, height: u32) -> Self {
+        self.height = height;
+        self
+    }
 }
 
 #[cfg(test)]

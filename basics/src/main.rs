@@ -7,6 +7,7 @@ mod maps;
 mod ownership;
 mod structs;
 mod traits;
+mod sets;
 
 fn main() {
     functions::say_apples(10);
