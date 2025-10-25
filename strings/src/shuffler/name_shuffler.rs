@@ -1,4 +1,4 @@
-fn name_shuffler(s: &str) -> String {
+pub fn name_shuffler(s: &str) -> String {
     // Preserve the exact whitespace between the names (and also keep any leading/trailing whitespace)
     // Identify: leading_ws, first, middle_ws, second, trailing_ws and then reassemble as:
     // leading_ws + second + middle_ws + first + trailing_ws
@@ -168,7 +168,7 @@ mod name_shuffler_string_tests {
         let mut rng = rand::rng();
         for _ in 1..40 {
             let first_name = first_names[rng.random_range(0..first_names.len())];
-            let last_name = last_names[rng.random_range(0..first_names.len())];
+            let last_name = last_names[rng.random_range(0..last_names.len())];
             assert_eq!(name_shuffler(&format!("{} {}", first_name, last_name)),
                        format!("{} {}", last_name, first_name));
         }

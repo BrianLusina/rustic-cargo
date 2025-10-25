@@ -5,4 +5,4 @@ pub mod permutation;
 pub mod reverse_string;
 pub mod slice;
 pub mod utils;
-mod shuffler;
+pub mod shuffler;
