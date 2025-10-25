@@ -165,10 +165,10 @@ mod name_shuffler_string_tests {
         let first_names=vec!["Augustus","Tobias","Vernon","Ryan","Bob","Kareem","Miguel","Cyril","Chris","Simon","Tim"];
         let last_names=vec!["Hill","Beecher","Schillinger","O'Reily","Rebadow","Said","Alvarez","O'Reily","Keller","Adebisi","McManus"];
 
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         for _ in 1..40 {
-            let first_name = first_names[rng.gen_range(0..first_names.len())];
-            let last_name = last_names[rng.gen_range(0..first_names.len())];
+            let first_name = first_names[rng.random_range(0..first_names.len())];
+            let last_name = last_names[rng.random_range(0..first_names.len())];
             assert_eq!(name_shuffler(&format!("{} {}", first_name, last_name)),
                        format!("{} {}", last_name, first_name));
         }
