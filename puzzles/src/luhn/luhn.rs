@@ -1,7 +1,7 @@
 /// Check a Luhn checksum.
 pub fn is_valid(code: &str) -> bool {
     // remove spaces from the input to have one full string
-    let cleaned_code = code.replace(" ", "");
+    let cleaned_code: String = code.chars().filter(|c| !c.is_whitespace()).collect();
 
     // strings of length 1 or less are not valid (after removing spaces)
     if cleaned_code.len() <= 1 {
