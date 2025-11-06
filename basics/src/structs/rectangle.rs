@@ -9,6 +9,10 @@ impl Rectangle {
         Rectangle { width, height }
     }
 
+    fn square(size: u32) -> Self {
+        Self { width: size, height: size }
+    }
+
     fn area(&self) -> u32 {
         self.width * self.height
     }
