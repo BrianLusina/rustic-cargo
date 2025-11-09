@@ -7,3 +7,4 @@ pub mod slice;
 pub mod utils;
 pub mod shuffler;
 pub mod lightsabers;
+pub mod bartender;
