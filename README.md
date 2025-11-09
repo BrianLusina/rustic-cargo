@@ -1,5 +1,10 @@
 # RustiCargo
 
+[![Build](https://github.com/BrianLusina/rustic-cargo/actions/workflows/build.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/build.yml)
+[![Lint](https://github.com/BrianLusina/rustic-cargo/actions/workflows/lint.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/lint.yml)
+[![Test](https://github.com/BrianLusina/rustic-cargo/actions/workflows/test.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/test.yml)
+[![Release](https://github.com/BrianLusina/rustic-cargo/actions/workflows/release.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/release.yml)
+
 Tiny mini Rust programs, data structures and algorithms.
 
 ## Running the tests
