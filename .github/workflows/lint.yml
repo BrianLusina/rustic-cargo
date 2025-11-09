@@ -1,4 +1,4 @@
-name: Build
+name: Lint
 
 on:
   - push
@@ -9,11 +9,11 @@ permissions:
   pull-requests: read
 
 jobs:
-  build:
+  lint:
     strategy:
       matrix:
         PROFILE: [release]
-    name: Build
-    uses: SanctumLabs/ci-workflows/.github/workflows/rust-build.yml@main
+    name: Lint
+    uses: SanctumLabs/ci-workflows/.github/workflows/rust-lint.yml@main
     with:
       profile: ${{ matrix.PROFILE }}

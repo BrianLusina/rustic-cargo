@@ -16,8 +16,6 @@ updates:
       - "cargo"
     assignees:
       - dependabot
-    reviewers:
-      - "BrianLusina"
 
   - package-ecosystem: cargo
     versioning-strategy: auto
@@ -34,5 +32,19 @@ updates:
       - "cargo"
     assignees:
       - dependabot
-    reviewers:
-      - "BrianLusina"
+
+  - package-ecosystem: cargo
+    versioning-strategy: auto
+    open-pull-requests-limit: 10
+    directories:
+      - "/src/programs/restaurant"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+      timezone: "Africa/Nairobi"
+    labels:
+      - "dependencies"
+      - "cargo"
+    assignees:
+      - dependabot
