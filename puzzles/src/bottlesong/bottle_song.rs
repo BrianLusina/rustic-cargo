@@ -1,13 +1,13 @@
 pub fn recite(start_bottles: u32, take_down: u32) -> String {
     let mut result = String::from("");
-    
+
     for bottle in 0..take_down {
         let current_bottle: u32 = start_bottles - bottle;
         let verse = format!(
             "{}\n{}\nAnd if one green bottle should accidentally fall,\n{}\n\n",
             bottles(current_bottle),
             bottles(current_bottle),
-            next_verse(current_bottle-1)
+            next_verse(current_bottle - 1)
         );
 
         result.push_str(&verse);
@@ -52,6 +52,7 @@ fn bottle_name(n: u32) -> String {
 fn next_verse(n: u32) -> String {
     format!(
         "There'll be {} green {} hanging on the wall.",
-        value_to_name(n).to_lowercase(), bottle_name(n)
+        value_to_name(n).to_lowercase(),
+        bottle_name(n)
     )
 }

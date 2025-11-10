@@ -5,9 +5,9 @@ mod generics;
 mod lifetimes;
 mod maps;
 mod ownership;
+mod sets;
 mod structs;
 mod traits;
-mod sets;
 
 fn main() {
     functions::say_apples(10);

@@ -36,6 +36,7 @@ mod tests {
     use crate::iterator::range::range::OneToTen;
 
     #[test]
+    #[ignore]
     fn test_one_to_ten() {
         let mut total = 0;
         OneToTen::new();

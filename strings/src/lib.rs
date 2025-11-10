@@ -1,10 +1,10 @@
 pub mod anagram;
+pub mod bartender;
 pub mod draw;
+pub mod lightsabers;
 pub mod palindrome;
 pub mod permutation;
 pub mod reverse_string;
+pub mod shuffler;
 pub mod slice;
 pub mod utils;
-pub mod shuffler;
-pub mod lightsabers;
-pub mod bartender;

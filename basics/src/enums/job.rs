@@ -10,6 +10,20 @@ pub enum Job {
     Banker,
 }
 
+impl Job {
+    fn salary(&self) -> u32 {
+        match self {
+            Job::Scientist(field) => 10000,
+            Job::Teacher(subject) => match subject {
+                Subject::Art => 5000,
+                Subject::Math => 5000,
+            },
+            Job::Farmer => 2000,
+            Job::Banker => 1000,
+        }
+    }
+}
+
 impl IsTeacher for Job {
     fn is_teacher(&self) -> bool {
         match self {

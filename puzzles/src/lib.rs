@@ -1,5 +1,6 @@
-pub mod space_age;
-pub mod minesweeper;
-pub mod flowerfield;
-pub mod luhn;
 pub mod bottlesong;
+pub mod flowerfield;
+pub mod grains;
+pub mod luhn;
+pub mod minesweeper;
+pub mod space_age;

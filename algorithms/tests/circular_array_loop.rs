@@ -12,7 +12,7 @@ mod circular_array_loop_tests {
 
     #[test]
     fn test_2() {
-        let numbers = vec! [-2, -1, -3];
+        let numbers = vec![-2, -1, -3];
         let expected = true;
         let actual = circular_array_loop(numbers);
         assert_eq!(actual, expected);

@@ -27,15 +27,20 @@ pub fn annotate(garden: &[&str]) -> Vec<String> {
 
             for dy in -1..=1 {
                 for dx in -1..=1 {
-                    if dy==0 && dx==0 {
+                    if dy == 0 && dx == 0 {
                         continue;
                     }
 
                     let ny = y as i32 + dy;
                     let nx = x as i32 + dx;
 
-                    if ny >= 0 && ny < rows as i32 && nx >=0 && nx < columns as i32 && grid[ny as usize][nx as usize] == b'*' {
-                        count +=1;
+                    if ny >= 0
+                        && ny < rows as i32
+                        && nx >= 0
+                        && nx < columns as i32
+                        && grid[ny as usize][nx as usize] == b'*'
+                    {
+                        count += 1;
                     }
                 }
             }

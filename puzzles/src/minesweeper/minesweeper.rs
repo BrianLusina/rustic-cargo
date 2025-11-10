@@ -58,7 +58,6 @@ pub fn annotate(minefield: &[&str]) -> Vec<String> {
     result
 }
 
-
 pub fn annotate_v2(minefield: &[&str]) -> Vec<String> {
     if minefield.is_empty() {
         return vec![];
@@ -80,7 +79,7 @@ pub fn annotate_v2(minefield: &[&str]) -> Vec<String> {
         let mut new_row = Vec::with_capacity(columns);
 
         for (col_idx, &cell) in row_bytes.iter().enumerate() {
-            if cell== b'*' {
+            if cell == b'*' {
                 // keep mines as they are
                 new_row.push(b'*');
             } else {
@@ -100,7 +99,13 @@ pub fn annotate_v2(minefield: &[&str]) -> Vec<String> {
     result
 }
 
-fn count_adjacent_mines(minefield: &[&str], row: usize, col: usize, rows:usize, cols:usize) -> u8 {
+fn count_adjacent_mines(
+    minefield: &[&str],
+    row: usize,
+    col: usize,
+    rows: usize,
+    cols: usize,
+) -> u8 {
     let mut count = 0;
 
     // check all 8 directions(including diagonals)
