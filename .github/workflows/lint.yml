@@ -19,7 +19,7 @@ jobs:
       profile: ${{ matrix.PROFILE }}
 
   clippy:
-    name: cargo clippy
+    name: Clippy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
