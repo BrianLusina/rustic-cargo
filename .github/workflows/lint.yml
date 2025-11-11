@@ -17,3 +17,11 @@ jobs:
     uses: SanctumLabs/ci-workflows/.github/workflows/rust-lint.yml@main
     with:
       profile: ${{ matrix.PROFILE }}
+
+  clippy:
+    name: cargo clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: cargo clippy
+        run: cargo clippy --all --all-targets -- -D warnings
