@@ -4,5 +4,5 @@ pub mod differenceofsquares;
 mod factorial;
 mod fibonacci;
 pub mod ops;
-mod utils;
 mod probability;
+mod utils;

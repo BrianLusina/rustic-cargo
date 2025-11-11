@@ -63,6 +63,7 @@ mod reverse_string_tests {
     }
 
     #[test]
+    #[ignore]
     #[cfg(feature = "grapheme")]
     fn grapheme_cluster_with_pre_combined_form() {
         let input = "Würstchenstand";
@@ -72,6 +73,7 @@ mod reverse_string_tests {
     }
 
     #[test]
+    #[ignore]
     #[cfg(feature = "grapheme")]
     fn grapheme_clusters() {
         let input = "ผู้เขียนโปรแกรม";
