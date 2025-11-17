@@ -1,5 +1,7 @@
 [workspace]
 
+exclude = [".github/workflows/scripts/build_directory"]
+
 members = [
     "datastructures",
     "math",

@@ -1,3 +1,5 @@
+mod closures;
+
 pub(crate) fn say_apples(apples: i32) {
     println!("I can use {} apples here", apples);
     {
