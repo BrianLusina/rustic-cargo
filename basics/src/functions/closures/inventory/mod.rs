@@ -1,2 +1,2 @@
-pub mod shirt_color;
 mod inventory;
+pub mod shirt_color;
