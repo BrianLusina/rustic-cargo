@@ -1,4 +1,3 @@
-
 // Function to check if a single number is prime
 pub fn is_prime(n: u64) -> bool {
     // Handle the base cases: numbers less than 2 are not prime

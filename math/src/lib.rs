@@ -4,6 +4,6 @@ pub mod differenceofsquares;
 mod factorial;
 mod fibonacci;
 pub mod ops;
+pub mod prime;
 mod probability;
 mod utils;
-pub mod prime;

@@ -17,7 +17,11 @@ impl Iterator for Primes {
         // Search for the next prime by testing odd candidates
         loop {
             let n = self.next_candidate;
-            self.next_candidate = self.next_candidate.saturating_add(2); // move to the next odd number
+            // Stop once we cannot advance by 2 without overflowing
+            if self.next_candidate > u32::MAX - 2 {
+                return None;
+            }
+            self.next_candidate += 2;
 
             let mut is_prime = true;
             for &p in &self.primes {
@@ -25,7 +29,7 @@ impl Iterator for Primes {
                 if (p as u64) * (p as u64) > n as u64 {
                     break;
                 }
-                if n % p == 0 {
+                if n.is_multiple_of(p) {
                     is_prime = false;
                     break;
                 }
