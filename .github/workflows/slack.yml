@@ -2,6 +2,8 @@
 # been successful or failed. Appropriate messages are then sent afterwards on each event type
 # Ref https://github.com/rtCamp/action-slack-notify
 name: Slack Notification
+permissions:
+  contents: read
 
 on:
   workflow_run:
