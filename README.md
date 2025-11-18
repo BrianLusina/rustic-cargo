@@ -4,6 +4,7 @@
 [![Lint](https://github.com/BrianLusina/rustic-cargo/actions/workflows/lint.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/lint.yml)
 [![Test](https://github.com/BrianLusina/rustic-cargo/actions/workflows/test.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/test.yml)
 [![Release](https://github.com/BrianLusina/rustic-cargo/actions/workflows/release.yml/badge.svg)](https://github.com/BrianLusina/rustic-cargo/actions/workflows/release.yml)
+[![codecov](https://codecov.io/github/BrianLusina/rustic-cargo/graph/badge.svg?token=eYa6xvBOn1)](https://codecov.io/github/BrianLusina/rustic-cargo)
 
 Tiny mini Rust programs, data structures and algorithms.
 
