@@ -1,5 +1,3 @@
-use crate::iterator::iterator::CustomIterator;
-
 // Custom Range struct that counts from 1 to 10
 struct OneToTen {
     next_val: u32,
@@ -11,7 +9,7 @@ impl OneToTen {
     }
 }
 
-impl CustomIterator for OneToTen {
+impl Iterator for OneToTen {
     // creating a stream of u32 values
     type Item = u32;
 
@@ -21,12 +19,12 @@ impl CustomIterator for OneToTen {
             None
         } else {
             // capture current value
-            let result = Some(self.next_val);
+            let current = Some(self.next_val);
             // increase next value by 1
             self.next_val += 1;
 
             //return previously capture value
-            result
+            current
         }
     }
 }
@@ -36,10 +34,11 @@ mod tests {
     use crate::iterator::range::range::OneToTen;
 
     #[test]
-    #[ignore]
     fn test_one_to_ten() {
         let mut total = 0;
-        OneToTen::new();
+        for i in OneToTen::new() {
+            total += i
+        }
 
         assert_eq!(total, 55);
     }
