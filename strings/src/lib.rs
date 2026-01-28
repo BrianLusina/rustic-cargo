@@ -1,6 +1,7 @@
 mod addlength;
 pub mod anagram;
 pub mod bartender;
+pub mod capitalize;
 pub mod draw;
 pub mod lightsabers;
 pub mod palindrome;
