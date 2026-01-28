@@ -1,4 +1,3 @@
-use crate::trees::node::Node;
 use crate::trees::tree::Tree;
 
 #[derive(Debug)]
@@ -10,6 +9,8 @@ impl BinaryTree {
     }
 }
 
-// impl<T> Tree<T> for BinaryTree<T> {
-//     // fn root(&self) -> Node<T> {}
-// }
+impl<T> Tree<T> for BinaryTree {
+    fn root(&self) -> T {
+        todo!()
+    }
+}

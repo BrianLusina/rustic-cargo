@@ -1,5 +1,3 @@
-pub trait Node<T> {
-    fn left(&self) -> T;
-    fn right(&self) -> T;
+pub trait TreeNode<T> {
     fn data(&self) -> T;
 }
