@@ -1,3 +1,4 @@
+mod addlength;
 pub mod anagram;
 pub mod bartender;
 pub mod draw;
