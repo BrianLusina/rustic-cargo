@@ -6,4 +6,5 @@ mod graphs;
 pub mod luhn;
 pub mod minesweeper;
 pub mod proverb;
+pub mod raindrops;
 pub mod space_age;
