@@ -1,5 +1,6 @@
 pub mod arrays;
 pub mod bottlesong;
+mod duckduckgoose;
 pub mod flowerfield;
 pub mod grains;
 mod graphs;
