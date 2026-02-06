@@ -20,7 +20,7 @@ fn fibs(count: usize) -> Vec<u32> {
 
 #[cfg(test)]
 mod tests {
-    use crate::fibonacci_utils::fibonacci;
+    use crate::fibonacci::fibonacci_utils::fibonacci;
 
     #[test]
     fn basic() {
@@ -45,7 +45,7 @@ mod tests {
 
 #[cfg(test)]
 mod fibs_tests {
-    use crate::fibonacci_utils::fibs;
+    use crate::fibonacci::fibonacci_utils::fibs;
 
     #[test]
     fn basic() {
