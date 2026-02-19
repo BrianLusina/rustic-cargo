@@ -12,5 +12,6 @@ members = [
     "algorithms",
     "strings",
     "programs/restaurant",
-    "puzzles"
+    "puzzles",
+    "design"
 ]

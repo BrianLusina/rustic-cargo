@@ -1,4 +1,5 @@
 pub mod arrays;
+pub mod bob;
 pub mod bottlesong;
 mod duckduckgoose;
 pub mod flowerfield;
