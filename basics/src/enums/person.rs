@@ -1,7 +1,7 @@
 use crate::enums::job;
 use crate::enums::job::{IsTeacher, Subject};
 use job::Job;
-use job::Job::{Banker, Farmer, Scientist, Teacher};
+use job::Job::{Banker, Farmer, Scientist, Student, Teacher};
 
 #[derive(Debug, Ord, PartialOrd, Eq, PartialEq, Clone)]
 struct Person {
@@ -57,6 +57,12 @@ impl Person {
                     self.name, other.job, self.job
                 )
             }
+            Student => {
+                format!(
+                    "Hello there student, I am {} I can see you are a {:?} and I am a {:?}",
+                    self.name, other.job, self.job
+                )
+            }
         }
     }
 }
@@ -68,6 +74,7 @@ impl IsTeacher for Person {
             Teacher(_) => true,
             Farmer => false,
             Banker => false,
+            Student => false,
         }
     }
 }

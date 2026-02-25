@@ -4,7 +4,7 @@ pub fn reply(message: &str) -> &str {
         if all_caps(message) {
             return "Calm down, I know what I'm doing!";
         }
-        return "Sure"
+        return "Sure";
     }
 
     if message.is_empty() {
