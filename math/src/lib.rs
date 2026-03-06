@@ -5,6 +5,7 @@ mod factorial;
 pub mod fibonacci;
 pub mod multiples;
 pub mod ops;
+mod power;
 pub mod prime;
 pub mod probability;
 pub mod utils;
