@@ -3,26 +3,26 @@ use crate::trees::tree_node::TreeNode;
 #[derive(Debug)]
 pub struct BinaryTreeNode<T> {
     data: T,
-    left: Box<BinaryTreeNode<T>>,
-    right: Box<BinaryTreeNode<T>>,
+    left: Option<Box<BinaryTreeNode<T>>>,
+    right: Option<Box<BinaryTreeNode<T>>>,
 }
 
 impl<T> BinaryTreeNode<T> {
-    // TODO: set new
-    // fn new(data: T) -> Self {
-    //     Self {
-    //         data,
-    //         left: Box::new(BinaryTreeNode {}),
-    //         right: Box::new(BinaryTreeNode {}),
-    //     }
-    // }
+    // TODO: set new to enable adding optional left and right nodes
+    fn new(data: T) -> Self {
+        Self {
+            data,
+            left: None,
+            right: None,
+        }
+    }
 
     fn set_left(&mut self, node: BinaryTreeNode<T>) {
-        self.left = Box::from(node)
+        self.left = Option::from(Box::from(node))
     }
 
     fn set_right(&mut self, node: BinaryTreeNode<T>) {
-        self.right = Box::from(node)
+        self.right = Option::from(Box::from(node))
     }
 }
 
