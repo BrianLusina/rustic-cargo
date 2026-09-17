@@ -5,3 +5,6 @@ edition = "2021"
 
 [dependencies]
 datastructures = { path = "../datastructures"}
+
+[dev-dependencies]
+parameterized = "2.1.0"
