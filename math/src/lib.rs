@@ -9,3 +9,4 @@ mod power;
 pub mod prime;
 pub mod probability;
 pub mod utils;
+pub mod factors;
