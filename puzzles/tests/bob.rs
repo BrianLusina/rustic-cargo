@@ -1,57 +1,43 @@
 use puzzles::bob::bob::*;
 
-#[test]
-fn stating_something() {
-    assert_eq!(reply("Tom-ay-to, tom-aaaah-to."), "Whatever.");
-}
+#[cfg(test)]
+mod bob_tests {
+    use parameterized::parameterized;
+    use parameterized::ide;
+    use puzzles::bob::bob::*;
 
-#[test]
-fn shouting() {
-    assert_eq!(reply("WATCH OUT!"), "Whoa, chill out!");
-}
+    ide!();
 
-#[test]
-fn shouting_gibberish() {
-    assert_eq!(reply("FCECDFCAAB"), "Whoa, chill out!");
-}
-
-#[test]
-fn asking_a_question() {
-    assert_eq!(
-        reply("Does this cryogenic chamber make me look fat?"),
-        "Sure."
-    );
-}
-
-#[test]
-fn asking_a_numeric_question() {
-    assert_eq!(reply("You are, what, like 15?"), "Sure.");
-}
-
-#[test]
-fn asking_gibberish() {
-    assert_eq!(reply("fffbbcbeab?"), "Sure.");
-}
-
-#[test]
-fn talking_forcefully() {
-    assert_eq!(reply("Hi there!"), "Whatever.");
-}
-
-#[test]
-fn using_acronyms_in_regular_speech() {
-    assert_eq!(
-        reply("It's OK if you don't want to go work for NASA."),
-        "Whatever."
-    );
-}
-
-#[test]
-fn forceful_question() {
-    assert_eq!(
-        reply("WHAT'S GOING ON?"),
-        "Calm down, I know what I'm doing!"
-    );
+    #[parameterized(
+        message = {
+            "Tom-ay-to, tom-aaaah-to.",
+            "WATCH OUT!",
+            "FCECDFCAAB",
+            "Does this cryogenic chamber make me look fat?",
+            "You are, what, like 15?",
+            "fffbbcbeab?",
+            "Hi there!",
+            "It's OK if you don't want to go work for NASA.",
+            "WHAT'S GOING ON?",
+            "1, 2, 3 GO!"
+        },
+        expected = {
+            "Whatever.",
+            "Whoa, chill out!",
+            "Whoa, chill out!",
+            "Sure.",
+            "Sure.",
+            "Sure.",
+            "Whatever.",
+            "Whatever.",
+            "Calm down, I know what I'm doing!",
+            "Whoa, chill out!"
+        }
+    )]
+    fn test_reply(message: &str, expected: &str) {
+        let actual = reply(message);
+        assert_eq!(expected, actual);
+    }
 }
 
 #[test]
